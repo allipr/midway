@@ -69,6 +69,7 @@ async findAll() {
 
 ```typescript
 import { Catch } from '@midwayjs/decorator';
+//官网文档中，此处导入InternalServerErrorError不成功，报模块@midwayjs/core中不存在成员InternalServerErrorError错误。
 import { InternalServerErrorError } from '@midwayjs/core';
 import { Context } from '@midwayjs/koa';
 
@@ -107,7 +108,7 @@ export class AllErrorFilter {
 import { Configuration, App, Catch } from '@midwayjs/decorator';
 import { join } from 'path';
 import * as koa from '@midwayjs/koa';
-import { InternalServerErrorFilter } from './filter/internal.filter';
+import { InternalServerErrorFilter } from './filter/internal.filter'; 
 
 @Configuration({
   imports: [
